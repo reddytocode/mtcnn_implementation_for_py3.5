@@ -8,7 +8,7 @@
 
 
   Create an enviroment with python 3.6.9 
-  
+  ```
   conda create --name myenv
   
   source activate myenv
@@ -16,5 +16,7 @@
   pip install mxnet-cu101
 
   pip install opencv-python
+
+  ```
 
   python main.py -> just draw a box and the landmarks for each face# mtcnn_implementation_for_py3.5
