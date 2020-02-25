@@ -5,7 +5,8 @@ import cv2
 import os
 import time
 
-detector = MtcnnDetector(model_folder='model', ctx=mx.gpu(0), accurate_landmark = False)
+detector = MtcnnDetector(model_folder='model', accurate_landmark = False)
+#detector = MtcnnDetector(model_folder='model', ctx=mx.gpu(0), accurate_landmark = False)
 
 
 img = cv2.imread('oscar1.jpg')
@@ -35,8 +36,9 @@ if results is not None:
         for i in range(5):
             cv2.circle(draw, (p[i], p[i + 5]), 1, (0, 0, 255), 2)
 
-    cv2.imshow("detection result", draw)
-    cv2.waitKey(0)
+#    cv2.imshow("detection result", draw)
+    cv2.imwrite("reddy.jpg", draw)
+#    cv2.waitKey(0)
 
 # --------------
 # test on camera
